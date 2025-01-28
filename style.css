@@ -11,15 +11,16 @@ img {
 /**************Generalt**************/
 h1 {
   font-family: "Roboto", serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
 }
 
 h2 {
   font-family: "Roboto", serif;
   font-weight: 400;
   font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 p {
@@ -35,23 +36,38 @@ p {
 
 header {
   display: flex;
-  padding: 20px;
+  padding: 2rem;
 }
+
 main {
-  padding-left: 10rem;
-  padding-right: 10rem;
-  max-width: 1200px;
-  margin: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
+
 /**************Generalt**************/
 
 /************** Forside ***********/
-h2 {
-  padding-bottom: 1rem;
-}
 .category_list_container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 850px) {
+  .category_list_container {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.category_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start; /* Gør at h2 starter på samme linje som kasserne */
+  max-width: 800px; /* Sørger for, at det ikke strækker sig */
+  margin: 0 auto; /* Centrerer indholdet uden at centrere h2 */
 }
 
 .category_list_container a {
