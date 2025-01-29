@@ -29,7 +29,11 @@ p {
   font-size: 1rem;
 }
 
-.p_bold {
+p.read_more {
+  text-decoration: underline;
+}
+
+.bold {
   font-family: "Roboto", serif;
   font-weight: 500;
 }
@@ -79,4 +83,71 @@ main {
   color: black;
   padding: 20px;
   border: 1px solid black;
+}
+/************** Forside ***********/
+
+/************* Product List ************/
+.product_list_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.product_list_container a {
+  text-decoration: none;
+  color: black;
+  line-height: 2rem;
+}
+
+.product_item {
+  position: relative; /* Sørg for, at produktcontaineren har position: relative */
+}
+
+.product_item img {
+  width: 100%; /* Gør billedet responsivt */
+  height: auto;
+}
+
+.soldout {
+  position: absolute;
+  top: 65%; /* Placerer "SOLD OUT" lidt fra toppen af billedet */
+  right: 3%; /* Placerer "SOLD OUT" lidt fra højre kant */
+  background-color: grey;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.sale {
+  position: absolute;
+  top: 3%; /* Lidt afstand fra toppen */
+  right: 5%; /* Lidt afstand fra højre kant */
+  background-color: brown;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+@media (min-width: 800px) {
+  .product_list_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* Subgrid opsætning */
+.product_item {
+  display: grid;
+  grid-template-columns: subgrid; /* Arver kolonneopsætning fra forælder */
+  grid-column: span 1; /* Hver item fylder én kolonne */
+}
+
+.product_item img {
+  width: 100%;
+  height: auto;
 }
