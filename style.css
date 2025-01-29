@@ -151,3 +151,31 @@ main {
   width: 100%;
   height: auto;
 }
+
+/************* Product List ************/
+
+/************** Product ****************/
+.product_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.product_container p {
+  line-height: 3rem;
+}
+
+@media (min-width: 800px) {
+  .product_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+.size:hover {
+  text-decoration: underline;
+}
+
+/************** Product ****************/
