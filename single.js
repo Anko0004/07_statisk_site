@@ -1,12 +1,12 @@
 let productId = 1163;
 let productContainer = document.querySelector(".productContainer");
 fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
-  .then((response) => respose.json())
+  .then((response) => response.json())
   .then((data) => {
     productContainer.innerHTML = `
 
             <div>
-                <img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="tshirt">
+                <img src="https://kea-alt-del.dk/t7/images/webp/640/${productId}.webp" alt="tshirt">
             </div>
 
             <div class="product_info">
