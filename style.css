@@ -92,6 +92,7 @@ main {
   grid-template-columns: 1fr;
   gap: 10px;
   width: 100%;
+  margin-bottom: 5rem;
 }
 
 .product_list_container a {
@@ -155,19 +156,19 @@ main {
 /************* Product List ************/
 
 /************** Product ****************/
-.product_container {
+.productContainer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
   width: 100%;
 }
 
-.product_container p {
+.productContainer p {
   line-height: 3rem;
 }
 
 @media (min-width: 800px) {
-  .product_container {
+  .productContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
