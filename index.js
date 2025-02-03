@@ -2,20 +2,18 @@ const listContainer = document.querySelector(".category_list_container");
 
 fetch(`https://kea-alt-del.dk/t7/api/categories`)
   .then((response) => response.json())
-  .then((data) => showList(data));
+  .then((data) => showCategory(data));
 
-function showList(categories) {
+function showCategory(categories) {
   const markup = categories
     .map(
-      (category) => ` 
+      (element) => ` 
     
-                <a href="productlist.html">
+                <a href="productlist.html?category=${element.category}">
                     <div>
-                        <p>${category.category}</p>
+                        <p>${element.category}</p>
                     </div>
                 </a>
-                
-         
    `
     )
     .join("");

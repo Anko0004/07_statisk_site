@@ -1,6 +1,12 @@
-const listContainer = document.querySelector(".product_list_container");
+const mycategory = new URLSearchParams(window.location.search).get("category");
 
-fetch(`https://kea-alt-del.dk/t7/api/products?limit=100`)
+const productContainer = document.querySelector(".product_list_container");
+
+const overskirft = document.querySelector("h2");
+
+overskirft.innerHTML = mycategory;
+
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${mycategory}`)
   .then((response) => response.json())
   .then((data) => showList(data));
 
@@ -21,5 +27,5 @@ function showList(data) {
    `
     )
     .join("");
-  listContainer.innerHTML = markup;
+  productContainer.innerHTML = markup;
 }
