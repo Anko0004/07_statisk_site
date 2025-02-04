@@ -19,3 +19,4 @@ function showCategory(categories) {
     .join("");
   listContainer.innerHTML = markup;
 }
+//
