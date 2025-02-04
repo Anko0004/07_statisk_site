@@ -112,6 +112,7 @@ main {
 
 .soldout {
   position: absolute;
+  visibility: hidden;
   top: 65%; /* Placerer "SOLD OUT" lidt fra toppen af billedet */
   right: 3%; /* Placerer "SOLD OUT" lidt fra højre kant */
   background-color: grey;
@@ -121,8 +122,13 @@ main {
   font-size: 1rem;
 }
 
+.isSoldOut {
+  visibility: visible;
+}
+
 .sale {
   position: absolute;
+  visibility: hidden;
   top: 3%; /* Lidt afstand fra toppen */
   right: 5%; /* Lidt afstand fra højre kant */
   background-color: brown;
@@ -131,6 +137,10 @@ main {
   border-radius: 5px;
   font-size: 1rem;
   display: inline-block;
+}
+
+.isOnSale {
+  visibility: visible;
 }
 
 @media (min-width: 800px) {
