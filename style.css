@@ -14,6 +14,15 @@ h1 {
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 3.5rem;
+  color: black;
+}
+
+h1:hover {
+  color: brown;
+}
+
+a {
+  text-decoration-line: none;
 }
 
 h2 {
@@ -56,12 +65,12 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   width: 100%;
-  justify-content: center;
 }
 
 @media (min-width: 850px) {
   .category_list_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
   }
 }
@@ -70,7 +79,6 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: start; /* Gør at h2 starter på samme linje som kasserne */
-  max-width: 800px; /* Sørger for, at det ikke strækker sig */
   margin: 0 auto; /* Centrerer indholdet uden at centrere h2 */
 }
 
@@ -84,6 +92,7 @@ main {
   padding: 20px;
   border: 1px solid black;
 }
+
 /************** Forside ***********/
 
 /************* Product List ************/
